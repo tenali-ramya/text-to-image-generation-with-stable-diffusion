@@ -1,0 +1,24 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Generated Image</title>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<div class="container">
+<h1>Result</h1>
+<p><strong>Prompt:</strong> {{ prompt }}</p>
+<p><strong>Steps:</strong> {{ steps }}</p>
+
+<img src="{{ image_static_url }}" alt="Generated Image">
+
+<div class="buttons">
+<a href="{% url 'generate_image' %}">Generate Another</a>
+<a href="{% url 'chatbot' %}">Go to Chatbot</a>
+</div>
+</div>
+</body>
+</html>

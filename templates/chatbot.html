@@ -1,0 +1,28 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chatbot</title>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<div class="container">
+<h1>Chatbot</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="prompt">Ask me something:</label>
+    <input type="text" name="prompt" id="prompt" placeholder="Type your question here">
+    <button type="submit">Send</button>
+</form>
+
+<div class="chat-history">
+    {% for msg in chat_history %}
+        <div class="message user"><strong>You:</strong> {{ msg.user }}</div>
+        <div class="message bot"><strong>Bot:</strong> {{ msg.bot }}</div>
+    {% endfor %}
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #eef2f3, #8e9eab);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+form label {
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+    color: #555;
+}
+
+form input, form button {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+form button {
+    background: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+form button:hover {
+    background: #2980b9;
+}
+
+img {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    background: #27ae60;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.buttons a:hover {
+    background: #1e8449;
+}
+
+.chat-history {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.message.user {
+    text-align: right;
+    color: #2980b9;
+}
+
+.message.bot {
+    text-align: left;
+    color: #27ae60;
+}
